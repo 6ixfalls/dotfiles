@@ -52,7 +52,7 @@ window_effects:
   # Visual effects to apply to the focused window.
   focused_window:
     transparency:
-      enabled: true
+      enabled: false
       opacity: "75%"
     # Highlight the window with a colored border.
     # ** Exclusive to Windows 11 due to API limitations.
