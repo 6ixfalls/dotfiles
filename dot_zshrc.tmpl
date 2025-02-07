@@ -130,6 +130,7 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 {{ if eq .chezmoi.os "windows" }}
 [ -f "{{ .chezmoi.homeDir }}/bin/win-sudo/s/path.sh" ] && export PATH=$PATH:~/bin/win-sudo/s
 export PATH="/c/Windows/System32/OpenSSH:$PATH"
+# VSCode integration
+[[ "$TERM_PROGRAM" == "vscode" ]] && [ -f "{{ .chezmoi.homeDir }}/AppData/Local/Programs/Microsoft VS Code/resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-rc.zsh" ] & . "{{ .chezmoi.homeDir }}/AppData/Local/Programs/Microsoft VS Code/resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-rc.zsh"
 {{ end }}
 
-[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path bash)"
