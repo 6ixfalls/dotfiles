@@ -1,0 +1,6 @@
+{{ if eq .chezmoi.os "windows" -}}
+#!/bin/bash
+{{ range .packages.windows.winget -}}
+winget install --id -e {{ . | quote }}
+{{ end -}}
+{{ end -}}

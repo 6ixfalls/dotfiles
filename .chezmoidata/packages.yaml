@@ -1,0 +1,5 @@
+packages:
+  windows:
+    winget:
+      - 'glzr-io.glazewm'
+      - 'glzr-io.zebar'
