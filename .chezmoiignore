@@ -1,6 +1,6 @@
 README.md
 {{- if ne .chezmoi.os "windows" }}
-dot_bashrc
-dot_glzr
-dot_config/tacky-borders
+.bashrc
+.glzr
+.config/tacky-borders
 {{- end }}
