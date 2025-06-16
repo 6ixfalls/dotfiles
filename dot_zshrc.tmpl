@@ -133,4 +133,6 @@ export PATH="/c/Windows/System32/OpenSSH:$PATH"
 # VSCode integration
 [[ "$TERM_PROGRAM" == "vscode" ]] && [ -f "{{ .chezmoi.homeDir }}/AppData/Local/Programs/Microsoft VS Code/resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-rc.zsh" ] & . "{{ .chezmoi.homeDir }}/AppData/Local/Programs/Microsoft VS Code/resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-rc.zsh"
 {{ end }}
-
+{{ if eq .chezmoi.os "darwin" }}
+eval "$(/opt/homebrew/bin/brew shellenv)"
+{{ end }}
