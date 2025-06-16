@@ -4,3 +4,6 @@ README.md
 .glzr
 .config/tacky-borders
 {{- end }}
+{{- if ne .chezmoi.os "darwin" }}
+.aerospace.toml
+{{- end }}
